@@ -106,9 +106,13 @@ li > a {
     justify-content: center;
 }
 h1 {
-    font-family: "Righteous";
-    text-align: left;
+    font-family: "Righteous", sans-serif;
     font-size: 3em;
+}
+h2 {
+    font-family: "Righteous", sans-serif;
+    font-size: 2em;
+    text-align: center;
 }
 .clean-home-title {
     display: flex;
@@ -130,6 +134,12 @@ h1 {
 }
 .you-title {
     animation: titleanim .2s both 1.7s;
+}
+.green-section {
+    background-color: #F7FFE7;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 
