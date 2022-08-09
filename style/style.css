@@ -13,6 +13,7 @@ body {
     padding: 0;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+    perspective: 2px;
 }
 .page::-webkit-scrollbar {
     display: none;
@@ -102,10 +103,16 @@ a:hover {
     font-family: "Abel", sans-serif;
 }
 .blue-section {
-    background-color: #E7F7FF;
+    background-color: /*#E7F7FF*/ transparent;
     width: 100%;
+    height: 80%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transform-style: preserve-3d;
+    z-index: -1;
 }
 h1 {
     font-family: "Righteous", sans-serif;
@@ -116,30 +123,14 @@ h2 {
     font-size: 2em;
     text-align: center;
 }
-.clean-home-title {
-    display: flex;
-    justify-content: space-evenly;
-    z-index: 10;
-}
-.happy-you-title {
-    margin-top: -3em;
-    display: flex;
-    justify-content: space-evenly;
-    z-index: 10;
-}
 .clean-title {
+    text-shadow: 0px 0px 5px white;
     animation: titleanim .2s both .5s;
-    margin-right: .5em;
-}
-.home-title {
-    animation: titleanim .2s both .7s;
 }
 .happy-title {
-    animation: titleanim .2s both 1.5s;
-    margin-right: .5em;
-}
-.you-title {
-    animation: titleanim .2s both 1.7s;
+    text-shadow: 0px 0px 5px white;
+    animation: titleanim .2s both .7s;
+    margin-top: -1em;
 }
 .green-section {
     background-color: #F7FFE7;
@@ -149,29 +140,22 @@ h2 {
     justify-content: center;
     align-items: center;
 }
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.image-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
 .happy-person {
-    width: 60%;
-    margin-top: -220px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.462);
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 120%;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+    filter: blur(2px) brightness(0.8);
 }
 .booking-button {
     background-color: #FFE7F7;
     font-family: "Abel", sans-serif;
-    font-size: 1em;
+    font-size: 2em;
     position: relative;
     padding: .5em 1.5em;
     border: none;
-    top: 100px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.479);
     transition: .2s;
@@ -325,6 +309,12 @@ h2 {
     .desktop {
         display: none;
     }
+    .clean-home-title {
+        font-size: 1em;
+    }
+    .happy-you-title {
+        font-size: 1em;
+    }
     .image-container {
         width: 100%;
         display: flex;
@@ -344,7 +334,6 @@ h2 {
         font-family: "Abel", sans-serif;
         font-size: 1em;
         position: relative;
-        top: 100px;
         padding: .5em 1.5em;
         border: none;
         border-radius: 5px;
@@ -355,11 +344,5 @@ h2 {
         background-color: #ddc8d6;
         box-shadow: none;
         cursor: pointer;
-    }
-    .blue-section {
-        background-color: #E7F7FF;
-        width: 100%;
-        display: flex;
-        justify-content: center;
     }
 }
