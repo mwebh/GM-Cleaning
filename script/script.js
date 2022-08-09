@@ -12,3 +12,13 @@ menuButton.addEventListener('click', () => {
         mobileNav.classList.remove("hideNav");
     }
 })
+
+const cleanHomeText = document.querySelector(".clean-title");
+const happyHomeText = document.querySelector(".happy-title");
+
+cleanHomeText.addEventListener('click', () => {
+    cleanHomeText.classList.toggle("pink-title");
+})
+happyHomeText.addEventListener('click', () => {
+    happyHomeText.classList.toggle("pink-title");
+})

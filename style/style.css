@@ -20,7 +20,9 @@ body {
 .page::-webkit-scrollbar {
     display: none;
   }
-
+p {
+    font-family: "Abel", sans-serif;
+}
 .desktop-logo {
     width: 20%;
     object-fit: cover;
@@ -130,6 +132,52 @@ h2 {
     color: white;
     animation: titleanim .3s both .5s;
 }
+.pink-title {
+    animation: colourchanger 5s both infinite !important;
+}
+@keyframes colourchanger {
+    0% {
+        color: rgb(255, 0, 238);
+        opacity: 1;
+    }
+    10% {
+        color: orange;
+    }
+    20% {
+        color: red;
+    }
+    30% {
+        color: yellow;
+    }
+    40% {
+        color: rgb(0, 255, 0);
+    }
+    50% {
+        color: rgb(0, 98, 255);
+    }
+    60% {
+        color: rgb(183, 0, 255);
+    }
+    70% {
+        color: violet;
+        text-shadow: none;
+    }
+    80% {
+        color: black;
+        text-shadow: 0px 0px 5px white;
+        opacity: 1;
+    }
+    90% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        color: white;
+    }
+}
+.blue-title {
+    color: #E7F7FF !important;
+}
 .happy-title {
     color: white;
     animation: titleanim .3s both 1s;
@@ -143,7 +191,7 @@ h2 {
     background-color: white;
 }
 .green-section {
-    background-color: #F7FFE7;
+    background-image: linear-gradient(135deg, #dae2cb, #FFE7F7);
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -189,17 +237,16 @@ h2 {
 .cleaning-service1 {
     display: grid;
     grid-template-columns: 40% 60%;
-    gap: .5em;
+    column-gap: 1em;
+    padding: 1em;
 }
 .cleaning-service1 > img {
     width: 100%;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.467);
 }
 .services-text {
     font-family: "Abel", sans-serif;
-    margin-left: .5em;
     display: flex;
     flex-direction: column;
     justify-content: center
@@ -213,23 +260,23 @@ h2 {
 .cleaning-service2 {
     display: grid;
     grid-template-columns: 60% 40%;
+    column-gap: 1em;
+    padding: 1em;
 }
 .cleaning-service2 > img {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    width: 100%;
+    border-radius: 10px;
+    width: calc(100% - 1em);
     grid-column: 2;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.467);
 }
 .services-text2 {
     grid-column: 1;
     grid-row: 1;
-    margin-right: .5em;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.services-text2 > * {
+.services-text2 > h3, .services-text2 > p {
     font-family: "Abel", sans-serif;
     text-align: right;
     margin: 0;
@@ -266,7 +313,6 @@ h2 {
     padding: 1em;
     margin: 1em;
     background-color: #E7F7FF;
-    border: 2px solid black;
     scroll-snap-align: center;
     scroll-snap-stop: always;
     border-radius: 10px;
@@ -377,7 +423,7 @@ h2 {
         padding: .5em 1.5em;
         border: none;
         border-radius: 5px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.479);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.296);
         transition: .2s;
     }
     .booking-button:hover {
@@ -404,8 +450,6 @@ h2 {
     }
     .cleaning-service1 > img {
         width: 80%;
-        border-bottom-right-radius: 0px;
-        border-top-right-radius: 0px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.467);
     }
     .services-text {
@@ -418,6 +462,8 @@ h2 {
     .services-text > * {
         margin: 0;
         padding: 0em 1em;
+        text-align: center;
+        margin: .3em;
     }
     
     .cleaning-service2 {
@@ -429,8 +475,6 @@ h2 {
         margin-bottom: 20px;
     }
     .cleaning-service2 > img {
-        border-top-left-radius: 0px;
-        border-bottom-left-radius: 0px;
         width: 60%;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.467);
     }
@@ -444,8 +488,8 @@ h2 {
     }
     .services-text2 > * {
         font-family: "Abel", sans-serif;
-        text-align: right;
-        margin: 0;
+        text-align: center;
+        margin: .3em;
         padding: 0em 1em;
     }
 
