@@ -322,6 +322,25 @@ h2 {
     text-align: center;
     font-family: "Abel", sans-serif;
 }
+.contact-reminder {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    justify-items: center;
+    margin: 1em;
+}
+.contact-reminder > button {
+    width: 40%;
+    min-width: 300px;
+    padding: 0em;
+    background-color: #FFE7F7;
+    font-family: "Abel", sans-serif;
+    font-size: 2em;
+    position: relative;
+    border:none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.286);
+}
 
 
 @media screen and (max-width: 600px) {
@@ -346,6 +365,81 @@ h2 {
         width: 40px;
         height: 40px;
     }
+    .bar1 {
+        position: relative;
+    }
+    .bar2 {
+        position: relative;
+    }
+    .bar3 {
+        position: relative;
+    }
+
+    .bar1active {
+        animation: cross1 1s both;
+    }
+    @keyframes cross1 {
+        100% {
+            transform: rotate(45deg);
+        }
+    }
+
+    .bar2active {
+        animation: fade-out 1s both;
+    }
+    @keyframes fade-out {
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .bar3active {
+        animation: cross2 1s both;
+    }
+    @keyframes cross2 {
+        100% {
+            transform: rotate(-45deg);
+            margin-top: -13px;
+        }
+    }
+
+    .returnbar1 {
+        animation: returnbar1 1s both;
+    }
+    @keyframes returnbar1 {
+        0% {
+            transform: rotate(45deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+    .returnbar2 {
+        animation: returnbar2 1s both;
+    }
+    @keyframes returnbar2 {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    .returnbar3 {
+        animation: returnbar3 1s both;
+    }
+    @keyframes returnbar3 {
+        0% {
+            transform: rotate(-45deg);
+            margin-top: -13px;
+        }
+        100% {
+            transform: rotate(0deg);
+            margin-top: 3px;
+        }
+    }
+
+
     .bar {
         background-color: white;
         height: 2px;
