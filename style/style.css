@@ -341,6 +341,86 @@ h2 {
     border:none;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.286);
 }
+.services-header {
+    max-width: 100%;
+    position: relative;
+    padding: 1em;
+    background-color: #E7F7FF;
+}
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.service {
+    max-width: 100%;
+    max-width: 300px;
+    position: relative;
+    padding: 1em;
+    border-bottom: 2px solid black;
+}
+.service > button {
+    padding: .5em 1em;
+    background-color: #FFE7F7;
+    font-family: "Abel", sans-serif;
+    font-size: 1em;
+    position: relative;
+    border:none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.286);
+}
+
+.about-me-header {
+    max-width: 100%;
+    position: relative;
+    padding: 1em;
+    background-color: #FFE7F7;;
+}
+.about-me {
+    max-width: 100%;
+    position: relative;
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.about-me > p {
+    max-width: 600px;
+}
+.georgia-photo {
+    width: 40%;
+    max-width: 100%;
+    min-width: 300px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.286);
+}
+
+.contact-header {
+    max-width: 100%;
+    position: relative;
+    padding: 1em;
+    background-color: #dae2cb;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.contact-form > * {
+    width: 100%;
+    max-width:300px;
+    margin: .5em;
+    font-family: "Abel", sans-serif;
+    font-size: 1em;
+}
+.contact-form > button {
+    padding: .5em 1em;
+    background-color: #FFE7F7;
+    font-family: "Abel", sans-serif;
+    font-size: 1em;
+    position: relative;
+    border:none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.286);
+}
 
 
 @media screen and (max-width: 600px) {
@@ -348,6 +428,8 @@ h2 {
         display: grid;
         grid-template-columns: 20% 80%;
     }
+
+    /*Fills a grid space in mobile header*/
     .nothing {
         width: 0px;
         height: 0px;
@@ -365,6 +447,9 @@ h2 {
         width: 40px;
         height: 40px;
     }
+
+
+    /*Menu Bars*/
     .bar1 {
         position: relative;
     }
@@ -453,8 +538,28 @@ h2 {
         z-index: 0;
         margin-top: -20em;
         visibility: hidden;
+        position: relative;
     }
 
+    .mobile-nav.active {
+        visibility: visible;
+        opacity: 0;
+        animation: fade-header 1s both ease;
+    }
+    @keyframes fade-header {
+        80% {
+            margin-top: 0em;
+            opacity: 0;
+        }
+        100% {
+            margin-top: 0em;
+            opacity: 1;
+        }
+    }
+
+    .mobile-nav.hideNav {
+        animation: fade-back 1s both ease;
+    }
     @keyframes fade-back {
         0% {
             margin-top: 0em;
@@ -467,24 +572,7 @@ h2 {
             margin-top: -20em;
         }
     }
-    .mobile-nav.active {
-        visibility: visible;
-        opacity: 0;
-        animation: fade-header 1s both ease;
-    }
-    .mobile-nav.hideNav {
-        animation: fade-back 1s both ease;
-    }
-    @keyframes fade-header {
-        80% {
-            margin-top: 0em;
-            opacity: 0;
-        }
-        100% {
-            margin-top: 0em;
-            opacity: 1;
-        }
-    }
+
     ul {
         flex-direction: column;
         left: unset;
