@@ -397,6 +397,9 @@ h2 {
         animation: cross2 1s both;
     }
     @keyframes cross2 {
+        0% {
+            margin-top: 3px;
+        }
         100% {
             transform: rotate(-45deg);
             margin-top: -13px;
