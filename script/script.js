@@ -44,3 +44,20 @@ happyHomeText.addEventListener('click', () => {
     happyHomeText.classList.toggle("pink-title");
 })
 
+
+const cleaningServices = document.querySelectorAll(".cleaning-service");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        entry.target.classList.toggle("show", entry.isIntersecting)
+        //if (entry.isIntersecting) observer.unobserve(entry.target)
+    })
+}, 
+{
+    threshold: 0.5,
+}
+)
+
+cleaningServices.forEach(cleaningService => {
+    observer.observe(cleaningService)
+})

@@ -239,6 +239,7 @@ h2 {
     grid-template-columns: 40% 60%;
     column-gap: 1em;
     padding: 1em;
+    opacity: 0;
 }
 .cleaning-service1 > img {
     width: 100%;
@@ -262,6 +263,7 @@ h2 {
     grid-template-columns: 60% 40%;
     column-gap: 1em;
     padding: 1em;
+    opacity: 0;
 }
 .cleaning-service2 > img {
     border-radius: 10px;
@@ -440,6 +442,34 @@ h2 {
 }
 .contact-button:hover {
     cursor: pointer;
+}
+
+.cleaning-service {
+    animation: disappear .5s both;
+}
+@keyframes disappear {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+}
+
+.show {
+    animation: appear .5s both;
+}
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 
