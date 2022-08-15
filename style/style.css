@@ -275,10 +275,12 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
-.services-text2 > h3, .services-text2 > p {
+.services-text2 > * {
     font-family: "Abel", sans-serif;
     text-align: right;
+    width: 100%;
     margin: 0;
     padding: 0;
 }
@@ -300,7 +302,7 @@ h2 {
     display: flex;
     flex-direction: row;
     overflow-x: auto;
-    max-width: 100vw;
+    max-width: 80vw;
     scroll-snap-type: x mandatory;
     padding: 0em 2em;
 }
@@ -313,10 +315,11 @@ h2 {
     padding: 1em;
     margin: 1em;
     background-color: #E7F7FF;
-    scroll-snap-align: center;
+    scroll-snap-align:start;
     scroll-snap-stop: always;
     border-radius: 10px;
-    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.178);
+    border: 2px solid white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.178);
 }
 .card > * {
     text-align: center;
@@ -346,6 +349,7 @@ h2 {
     position: relative;
     padding: 1em;
     background-color: #E7F7FF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.433);
 }
 .services-list {
     display: flex;
@@ -373,7 +377,8 @@ h2 {
     max-width: 100%;
     position: relative;
     padding: 1em;
-    background-color: #FFE7F7;;
+    background-color: #FFE7F7;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.433);
 }
 .about-me {
     max-width: 100%;
@@ -398,8 +403,10 @@ h2 {
     position: relative;
     padding: 1em;
     background-color: #dae2cb;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.433);
 }
 .contact-form {
+    margin: 2em 0em;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -420,6 +427,19 @@ h2 {
     position: relative;
     border:none;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.286);
+}
+
+.contact-button {
+    background-color: #FFE7F7;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.228);
+    font-size: 1rem;
+    font-family: "Abel", sans-serif;
+    padding: .5em 2em;
+
+}
+.contact-button:hover {
+    cursor: pointer;
 }
 
 
@@ -670,6 +690,7 @@ h2 {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
     .services-text2 > * {
         font-family: "Abel", sans-serif;
@@ -681,7 +702,7 @@ h2 {
 
     .testimonials {
         overflow-x: auto;
-        max-width: 100vw;
+        max-width: 90vw;
         scroll-snap-type: x mandatory;
     }
     .card {
@@ -691,7 +712,6 @@ h2 {
         padding: 1em;
         margin: 1em;
         background-color: #E7F7FF;
-        border: 2px solid black;
         scroll-snap-align: center;
         scroll-snap-stop: always;
     }

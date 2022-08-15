@@ -44,9 +44,3 @@ happyHomeText.addEventListener('click', () => {
     happyHomeText.classList.toggle("pink-title");
 })
 
-
-const contactButton = document.querySelector(".contact-button");
-
-contactButton.addEventListener('click', () => {
-    window.location.href("/pages/contact.html")
-})
