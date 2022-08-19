@@ -199,7 +199,6 @@ h2 {
     justify-content: center;
     align-items: center;
     margin-top: -30px;
-    overflow-x: hidden;
     border-radius: 10px;
     box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.477);
     margin-bottom: 40px;
@@ -230,11 +229,11 @@ h2 {
     cursor: pointer;
 }
 .home-services {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    max-width: 100%;
 }
+
 
 .cleaning-service1 {
     display: grid;
@@ -244,7 +243,7 @@ h2 {
     opacity: 0;
 }
 .cleaning-service1 > img {
-    width: 100%;
+    max-width: 100%;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.467);
 }
@@ -262,33 +261,26 @@ h2 {
 
 .cleaning-service2 {
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 40% 60%;
     column-gap: 1em;
     padding: 1em;
     opacity: 0;
 }
 .cleaning-service2 > img {
     border-radius: 10px;
-    width: calc(100% - 1em);
-    grid-column: 2;
+    max-width: 100%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.467);
 }
 .services-text2 {
-    grid-column: 1;
-    grid-row: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 .services-text2 > * {
     font-family: "Abel", sans-serif;
-    text-align: right;
-    width: 100%;
     margin: 0;
     padding: 0;
 }
-
 
 @keyframes titleanim {
     0% {
@@ -712,7 +704,7 @@ h2 {
         margin-bottom: 20px;
     }
     .cleaning-service2 > img {
-        width: 60%;
+        width: 80%;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.467);
     }
     .services-text2 {
