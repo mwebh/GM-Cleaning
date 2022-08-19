@@ -76,6 +76,7 @@ a:hover {
     grid-template-columns: 50% 50%;
     background-color: black;
     padding-top: 20px;
+    padding-bottom: 44px;
 }
 .legal {
     display: flex;
