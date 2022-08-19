@@ -199,6 +199,7 @@ h2 {
     justify-content: center;
     align-items: center;
     margin-top: -30px;
+    overflow-x: hidden;
     border-radius: 10px;
     box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.477);
     margin-bottom: 40px;
@@ -451,11 +452,11 @@ h2 {
 @keyframes disappear {
     0% {
         opacity: 1;
-        transform: scale(1);
+        transform: scale(1) translateX(0px);
     }
     100% {
         opacity: 0;
-        transform: scale(1.2);
+        transform: scale(1.1) translateX(-50px);
     }
 }
 
@@ -465,11 +466,11 @@ h2 {
 @keyframes appear {
     0% {
         opacity: 0;
-        transform: scale(1.2);
+        transform: scale(1.1) translateX(-50px);
     }
     100% {
         opacity: 1;
-        transform: scale(1);
+        transform: scale(1) translateX(0px);
     }
 }
 
