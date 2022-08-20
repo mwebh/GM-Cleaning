@@ -32,7 +32,7 @@ menuButton.addEventListener('click', () => {
         mobileNav.classList.add("active");
         mobileNav.classList.remove("hideNav");
     }
-})
+});
 
 const cleanHomeText = document.querySelector(".clean-title");
 const happyHomeText = document.querySelector(".happy-title");
@@ -42,7 +42,7 @@ cleanHomeText.addEventListener('click', () => {
 })
 happyHomeText.addEventListener('click', () => {
     happyHomeText.classList.toggle("pink-title");
-})
+});
 
 
 const cleaningServices = document.querySelectorAll(".cleaning-service");
@@ -60,4 +60,4 @@ const observer = new IntersectionObserver(entries => {
 
 cleaningServices.forEach(cleaningService => {
     observer.observe(cleaningService)
-})
+});
