@@ -418,6 +418,7 @@ h2 {
 .contact-form > button {
     padding: .5em 1em;
     background-color: #FFE7F7;
+    color: black;
     font-family: "Abel", sans-serif;
     font-size: 1em;
     position: relative;
