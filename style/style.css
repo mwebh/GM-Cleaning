@@ -42,7 +42,7 @@ p {
     margin: 0;
     padding: 0;
     box-shadow: 0px 0px 10px black;
-    z-index: 10;
+    z-index: 20;
 }
 .desktop {
     display: grid;
@@ -202,6 +202,8 @@ h2 {
     border-radius: 10px;
     box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.477);
     margin-bottom: 40px;
+    overflow-x: hidden;
+    overflow-y:auto;
 }
 .happy-person {
     position: absolute;
@@ -345,7 +347,8 @@ h2 {
     position: relative;
     padding: 1em;
     background-color: #E7F7FF;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.433);
+    border-bottom: 2px solid black;
+    z-index: -1;
 }
 .services-list {
     display: flex;
@@ -374,7 +377,8 @@ h2 {
     position: relative;
     padding: 1em;
     background-color: #FFE7F7;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.433);
+    border-bottom: 2px solid black;
+    z-index: -1;
 }
 .about-me {
     max-width: 100%;
@@ -399,7 +403,8 @@ h2 {
     position: relative;
     padding: 1em;
     background-color: #dae2cb;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.433);
+    border-bottom: 2px solid black;
+    z-index: -1;
 }
 .contact-form {
     margin: 2em 0em;
