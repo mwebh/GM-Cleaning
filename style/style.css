@@ -202,8 +202,6 @@ h2 {
     border-radius: 10px;
     box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.477);
     margin-bottom: 40px;
-    overflow-x: hidden;
-    overflow-y:auto;
 }
 .happy-person {
     position: absolute;
@@ -415,10 +413,11 @@ h2 {
 }
 .contact-form > * {
     width: 100%;
-    max-width:300px;
+    max-width: 300px;
     margin: .5em;
     font-family: "Abel", sans-serif;
     font-size: 1em;
+    padding: 10px;
 }
 .contact-form > button {
     padding: .5em 1em;
@@ -429,6 +428,16 @@ h2 {
     position: relative;
     border:none;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.286);
+    transition: .2s;
+}
+.contact-form > button:hover {
+    background-color: #ddc8d6;
+    cursor: pointer;
+}
+#description {
+    min-height: 150px;
+    height: 40vh;
+    max-height: 300px;
 }
 
 .contact-button {
@@ -442,6 +451,7 @@ h2 {
 }
 .contact-button:hover {
     cursor: pointer;
+    background-color: #ddc8d6;
 }
 
 .cleaning-service {
